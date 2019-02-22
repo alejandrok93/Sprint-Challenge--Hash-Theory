@@ -1,4 +1,7 @@
+#include "../hashtable.h"
+// #include "../hashtable.c"
 #include "../ex2.h"
+// #include "../ex2.c"
 #include "../../utils/utils.h"
 #include "../../utils/minunit.h"
 
@@ -21,7 +24,7 @@ char *test_short_case()
   ticket_3->destination = "NONE";
   tickets[2] = ticket_3;
 
-  char *expected[] = { "PDX", "DCA", "NONE" };
+  char *expected[] = {"PDX", "DCA", "NONE"};
 
   mu_assert(check_string_arrays(reconstruct_trip(tickets, 3), expected, 3, 3), "Your function did not return the expected output");
 
@@ -82,7 +85,7 @@ char *test_long_case()
   ticket_10->destination = "FLG";
   tickets[9] = ticket_10;
 
-  char *expected[] = { "LAX", "SFO", "BHM", "FLG", "XNA", "CID", "SLC", "PIT", "ORD", "NONE" };
+  char *expected[] = {"LAX", "SFO", "BHM", "FLG", "XNA", "CID", "SLC", "PIT", "ORD", "NONE"};
 
   mu_assert(check_string_arrays(reconstruct_trip(tickets, 10), expected, 10, 10), "Your function did not return the expected output");
 
