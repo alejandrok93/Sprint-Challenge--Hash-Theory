@@ -1,7 +1,8 @@
 #ifndef _ex_1_h_
 #define _ex_1_h_
 
-typedef struct Answer {
+typedef struct Answer
+{
   int index_1;
   int index_2;
 } Answer;
